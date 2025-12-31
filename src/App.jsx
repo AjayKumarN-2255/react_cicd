@@ -7,7 +7,7 @@ function App() {
     <>
       <main className="container">
         <section className="hero">
-          <h1>Build. Deploy. Scale.</h1>
+          <h1>Build. Deploy. Scale.(updated) </h1>
           <p>
             A modern React frontend ready for real-world applications.
             Clean structure, reusable components, and production-ready.
