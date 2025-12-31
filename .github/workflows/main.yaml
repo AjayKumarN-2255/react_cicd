@@ -24,3 +24,21 @@ jobs:
 
       - name: Build React App
         run: npm run build
+  
+  docker-build-and-push:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      
+      - name: Docker Login to Docker Hub
+        run: |
+             docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" -p "${{ secrets.DOCKERHUB_PASSWORD }}"
+      
+      - name: Build Docker image 
+        run: docker build -t "${{ secrets.DOCKERHUB_USERNAME }}/greeting-react-app:latest" .
+
+      - name: Push Docker image to Docker Hub
+        run: docker push "${{ secrets.DOCKERHUB_USERNAME }}/greeting-react-app:latest"
