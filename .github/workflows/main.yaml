@@ -20,7 +20,7 @@ jobs:
           node-version: '20.x'
       
       - name: Install Dependencies
-        uses: npm install
+        run: npm install
 
       - name: Run React App
-        uses: npm run dev
+        run: npm run dev
