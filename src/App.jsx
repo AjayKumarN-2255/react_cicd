@@ -1,33 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <main className="container">
+        <section className="hero">
+          <h1>Build. Deploy. Scale.</h1>
+          <p>
+            A modern React frontend ready for real-world applications.
+            Clean structure, reusable components, and production-ready.
+          </p>
+
+          <div className="actions">
+            <button className="primary">Get Started</button>
+            <button className="secondary">Learn More</button>
+          </div>
+        </section>
+
+        <section className="features">
+          <div className="feature-card">
+            <h3>Fast</h3>
+            <p>Optimized performance using modern React patterns.</p>
+          </div>
+
+          <div className="feature-card">
+            <h3>Scalable</h3>
+            <p>Component-based architecture that grows with your app.</p>
+          </div>
+
+          <div className="feature-card">
+            <h3>Production Ready</h3>
+            <p>Built to integrate with Docker and CI/CD pipelines.</p>
+          </div>
+        </section>
+      </main>
     </>
   )
 }
